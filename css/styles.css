@@ -1,10 +1,19 @@
 /* Global Styles */
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background: linear-gradient(to right, #e0eafc, #cfdef3);
-    color: #333;
+    color: #0a4e1c;
+}
+
+.content {
+    flex: 1;
 }
 
 /* Header Styles */
@@ -37,60 +46,6 @@ header nav ul li a:hover {
     color: #e0eafc;
 }
 
-/* Section Styles */
-section {
-    padding: 30px;
-    margin: 20px auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-}
-
-h2 {
-    color: #4CAF50;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-/* Hero Section Styles */
-.hero-section {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
-.hero-content .btn-primary {
-    padding: 15px 30px;
-    background: #4CAF50;
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background 0.3s;
-}
-
-.hero-content .btn-primary:hover {
-    background: #45a049;
-}
-
 /* Statistics Section Styles */
 #stats {
     display: flex;
@@ -111,6 +66,22 @@ h2 {
 
 .stat p {
     font-size: 18px;
+}
+
+/* Section Styles */
+section {
+    padding: 30px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
 /* Gallery Styles */
@@ -174,6 +145,48 @@ form button:hover {
     background: #45a049;
 }
 
+/* Hero Section Styles */
+.hero-section {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background: #000; /* Latar belakang solid untuk menghilangkan transparansi */
+    opacity: 0.8; /* Sesuaikan jika diperlukan untuk efek transparansi */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn-primary {
+    padding: 15px 30px;
+    background: #4CAF50;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.hero-content .btn-primary:hover {
+    background: #45a049;
+}
+
 /* Map Section Styles */
 #map {
     padding: 30px;
@@ -187,38 +200,14 @@ form button:hover {
     height: 450px;
 }
 
-/* Testimonial Section Styles */
-#testimonials {
-    background: #f9f9f9;
-    padding: 30px;
-    text-align: center;
-}
-
-.testimonial {
-    margin: 20px auto;
-    max-width: 600px;
-}
-
-.testimonial p {
-    font-style: italic;
-}
-
-.testimonial cite {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #4CAF50;
-}
-
 /* Footer Styles */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     width: 100%;
-    bottom: 0;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -253,45 +242,85 @@ footer .social-icon img {
     background: #45a049;
 }
 
-/* Hero Section Styles */
-.hero-section {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: #4CAF50;
     color: white;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.5); /* Ganti dengan warna solid jika diperlukan */
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang opak untuk konten */
-    padding: 20px;
-    border-radius: 10px;
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-/* Hero Content Styles */
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
-.hero-content .btn-primary {
-    padding: 15px 30px;
-    background: #4CAF50;
+.btn-warning, .btn-danger {
+    padding: 10px 20px;
+    border: none;
     border-radius: 8px;
     color: white;
     text-decoration: none;
-    font-size: 18px;
     transition: background 0.3s;
 }
 
-.hero-content .btn-primary:hover {
-    background: #45a049;
+.btn-warning {
+    background: #ff9800;
+}
+
+.btn-warning:hover {
+    background: #fb8c00;
+}
+
+.btn-danger {
+    background: #f44336;
+}
+
+.btn-danger:hover {
+    background: #e53935;
+}
+
+.btn-secondary {
+    background: #757575;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #616161;
+}
+
+/* Testimonial Section Styles */
+#testimonials {
+    background: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4CAF50;
 }
